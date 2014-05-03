@@ -70,6 +70,9 @@ SwearJar::Application.configure do
   config.i18n.fallbacks = true
 
   # Send deprecation notices to registered listeners.
+
+  config.force_ssl = true
+  
   config.active_support.deprecation = :notify
 
   # Disable automatic flushing of the log to improve performance.
