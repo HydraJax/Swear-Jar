@@ -1,8 +1,10 @@
 class User < ActiveRecord::Base
-  # attr_accessible :email, :password, :password_confirmation
+  # the user donates to many nonprofits therefore
   
   has_many :nonprofits
   
+# again this code was from the screen cast, I had an password in the datatables, but we dont do that, so it was necessary to find a way to store an encrypted password into the table
+
   attr_accessor :password
   before_save :encrypt_password
   

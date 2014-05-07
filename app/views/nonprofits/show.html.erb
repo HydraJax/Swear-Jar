@@ -1,3 +1,18 @@
 
+<!-- I want to find all the donations from that particular user_id to print a donation history -->
 
-show donation history by user_id
+<!-- <div class="donation_history"> -->
+
+  <!-- history includes user.name, nonprofit.amount, and nonprofit. name -->
+   <%= @user.name.capitalize %>, you have donated to:<p></p> 
+    
+     <% @nonprofits_search.map do |hash| %>
+       <ul> 
+     
+     <li>Enitity: <%= hash[:name].to_s.titleize%></li>
+     <li>Amount: $<%= hash[:amount].to_s%> </li>
+      </ul> 
+    <% end %>
+     
+    
+</div> 
