@@ -11,28 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140504181215) do
+ActiveRecord::Schema.define(version: 20140503202827) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "non_profits", force: true do |t|
-    t.string   "link"
+  create_table "nonprofits", force: true do |t|
+    t.string   "name"
     t.string   "amount"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "non_profits", ["user_id"], name: "index_non_profits_on_user_id", using: :btree
+  add_index "nonprofits", ["user_id"], name: "index_nonprofits_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "password_hash"
     t.string   "email"
+    t.string   "password_salt"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "password_salt"
   end
 
 end

@@ -4,15 +4,15 @@
 	margin-top: 10px;
 }
 
-a{
+/*a{
 	text-decoration: none;
 	font-family: 'Oswald', sans-serif;
-	font-weight: 900;
+	font-weight: 500;
 	font-size: 1.5em;
 	color: rgba(243, 156, 18, .5);
 	padding: 80%;
 	margin: 10px;
-}
+}*/
 
 .top-banner{
 	padding: 10px 10px;
@@ -26,12 +26,12 @@ a{
 	color: rgba(236, 240, 241,.7);
 }
 
-h1{
+/*h1{
 	padding-left: 100px;
 	text-shadow: 3px 3px 5px rgba(213, 85, 2, .5);
 	letter-spacing: 0.1em;
 	word-spacing: 0.4em;
-}
+}*/
 .bottom-banner{
 	padding: 50px 40px;
 	width: 100%;
@@ -40,15 +40,19 @@ h1{
 	box-shadow: 12px 12px 33px 12px rgba(0,0,0,.25);
 }
 
-form{
+/*form{
 	margin-left: 50px;
 	margin-top: 80px;
 	margin-bottom: 200px;
-}
-p{
+}*/
+/*p{
 	font-family: 'Oswald', sans-serif;
 	color: rgba(243, 156, 18, 1);
 	margin: 10px;
 	letter-spacing: 0.1em;
 	word-spacing: 0.25em;
+}*/
+
+.sign-out{
+	
 }

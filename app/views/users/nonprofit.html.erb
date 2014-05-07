@@ -1,0 +1,31 @@
+<!-- goes to search method in users controller -->
+<div class="keyword">
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Keyword:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+
+<div class="interest">
+<%= radio_button_tag("ntee_id", "1") %>
+<p><%= label_tag("ntee", "Arts, Culture & Humanities") %></p>
+<%= radio_button_tag("ntee_id", "2") %>
+<p><%= label_tag("ntee", "Education") %></p>
+<%= radio_button_tag("ntee_id", "3") %>
+<p><%= label_tag("ntee_id", "Environment and Animals") %></p>
+<%= radio_button_tag("ntee_id", "4") %>
+<p><%= label_tag("ntee", "Health") %></p>
+<%= radio_button_tag("ntee_id", "5") %>
+<p><%= label_tag("ntee_id", "Human Services") %></p>
+<%= radio_button_tag("ntee_id", "6") %>
+<p><%= label_tag("ntee", "International, Foreign Affairs") %></p>
+<%= radio_button_tag("ntee_id", "7") %>
+<p><%= label_tag("ntee_id", "Public, Societal Benefit") %></p>
+<%= radio_button_tag("ntee_id", "8") %>
+<p><%= label_tag("ntee", "Religion Related") %></p>
+<%= radio_button_tag("ntee_id", "9") %>
+<p><%= label_tag("ntee_id", "Mutual/Membership Benefit") %></p>
+<%= radio_button_tag("ntee_id", "10") %>
+<p><%= label_tag("ntee", "Unknown, Unclassified") %></p>
+</div>
+<% end %>
+</div>

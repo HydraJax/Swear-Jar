@@ -1,8 +1,10 @@
 class User < ActiveRecord::Base
   # attr_accessible :email, :password, :password_confirmation
   
-  # attr_accessor :password
-  # before_save :encrypt_password
+  has_many :nonprofits
+  
+  attr_accessor :password
+  before_save :encrypt_password
   
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create
