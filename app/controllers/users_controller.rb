@@ -28,5 +28,6 @@ class UsersController < ApplicationController
     ntee_id = params[:ntee_id]
     results = Typhoeus.get("https://projects.propublica.org/nonprofits/api/v1/search.json", :params => {:q => stuff, 'ntee[id]' => ntee_id })
     @nonprofit_result = JSON.parse(results.body)
+    # binding.pry
    end
 end
