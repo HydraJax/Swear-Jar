@@ -4,15 +4,17 @@
 <!-- <div class="donation_history"> -->
 
   <!-- history includes user.name, nonprofit.amount, and nonprofit. name -->
-   <%= @user.name.capitalize %>, you have donated to:<p></p> 
-    
-     <% @nonprofits_search.map do |hash| %>
-       <ul> 
-     
+
+<div class="donations_history_wrapper">
+  <div class="donation_history_text">
+   <%= @user.name.capitalize %>, here is a list of your current donations.  The non-profit entity and the amount are listed to the right.<p></p> Please Remember to Log Out !
+  </div>
+  <div class="donations_history">
+    <% @nonprofits_search.map do |hash| %>
+    <ul> 
      <li>Enitity: <%= hash[:name].to_s.titleize%></li>
      <li>Amount: $<%= hash[:amount].to_s%> </li>
-      </ul> 
+    </ul> 
     <% end %>
-     
-    
+  </div>
 </div> 
