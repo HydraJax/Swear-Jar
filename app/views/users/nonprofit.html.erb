@@ -1,6 +1,6 @@
-<!-- goes to search method in users controller -->
+<!-- goes to search in users controller -->
 <div class="keyword">
-<%= form_tag("nonprofit", method: "get") do %>
+<%= form_tag("search", method: "get") do %>
   <%= label_tag(:q, "Keyword:") %>
   <%= text_field_tag(:q) %>
   <%= submit_tag("Search") %>

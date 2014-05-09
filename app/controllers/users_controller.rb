@@ -7,10 +7,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params.require(:user).permit(:name, :email, :password, :password_confirmation))
         if @user.save
-         # redirect_to nonprofit_path, :notice => "You are Signed Up!"
-         # redirect_to search_path, :notice => "You are Signed Up!....Please Login once you sign up. This is part of the authentication process"
           redirect_to log_in_path, :notice => "You are Signed Up!....Please Login once you sign up. This is part of the authentication process"
-
         else
         render "new"
         end
@@ -28,6 +25,5 @@ class UsersController < ApplicationController
     ntee_id = params[:ntee_id]
     results = Typhoeus.get("https://projects.propublica.org/nonprofits/api/v1/search.json", :params => {:q => stuff, 'ntee[id]' => ntee_id })
     @nonprofit_result = JSON.parse(results.body)
-    # binding.pry
    end
 end
