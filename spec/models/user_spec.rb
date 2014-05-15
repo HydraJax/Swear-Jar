@@ -11,7 +11,8 @@ describe User do
 
   it { should respond_to(:name) }
   it { should respond_to(:email) }
-  it { should respond_to(:password_digest) }
+  #It looks like this spec should be passing password hasd instead of digest 
+  it { should respond_to(:password_hash) }
   it { should respond_to(:password) }
   it { should respond_to(:password_confirmation) }
 
@@ -20,6 +21,7 @@ describe User do
   describe "when name is not present" do
     before { @user.name = " " }
     it { should_not be_valid }
+    # You'll need to add a validation to ensure a user has a name before this will pass
   end
 
   describe "when email format is invalid" do
@@ -29,6 +31,8 @@ describe User do
       addresses.each do |invalid_address|
         @user.email = invalid_address
         expect(@user).not_to be_valid
+        # This is testing a format validation on a users email, 
+        # but it doesn't look like you have that validation
       end
     end
   end
@@ -56,4 +60,4 @@ describe User do
     it { should_not be_valid }
   end
 end
-end
+# end <- You have an extra end here
